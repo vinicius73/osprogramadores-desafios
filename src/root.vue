@@ -1,9 +1,11 @@
 <script>
 import Page from './pages/challenge5'
+import RootHeader from './components/header.vue'
 
 export default {
-  name: 'app',
+  name: 'root',
   components: {
+    RootHeader,
     Page
   }
 }
@@ -11,48 +13,24 @@ export default {
 
 <template>
   <div id="app">
-    <header>
-      <span>Os Programadores [Desafio 05]</span>
-    </header>
-    <main>
-      <Page />
+    <RootHeader class="is-fixed-top" />
+    <main class="root">
+      <Page class="container is-fluid" />
     </main>
   </div>
 </template>
 
+<style scoped>
+  .root {
+    padding-top: 65px;
+  }
+</style>
+
 <style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 </style>

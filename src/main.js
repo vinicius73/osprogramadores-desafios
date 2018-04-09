@@ -9,5 +9,5 @@ Vue.use(support)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(Root)
+  ...Root
 })
