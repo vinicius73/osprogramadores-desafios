@@ -1,5 +1,14 @@
 <template>
-  <C3Chart v-bind="chartProps" />
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Resultados
+      </p>
+    </header>
+    <div class="card-content">
+      <C3Chart v-bind="chartProps" />
+    </div>
+  </div>
 </template>
 
 <script>
