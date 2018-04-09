@@ -7,16 +7,23 @@ const getRounds = result => reduce(rounds, (acc, key) => {
   return acc
 }, [])
 
-export const loadResults = () => import('../data/results.json')
-  .then(json => orderBy(Object.keys(json))
+const makeLabel = ({ language, creator }) => `${language} (${creator})`
+
+export const loadResults = async () => {
+  const [tests, results] = await Promise.all([
+    import('../data/tests.json'),
+    import('../data/results.json')
+  ])
+
+  return orderBy(Object.keys(results))
     .reduce((acc, key) => {
       acc.push([
-        key,
-        ...getRounds(json[key])
+        makeLabel(tests[key]),
+        ...getRounds(results[key])
       ])
       return acc
     }, [])
-  )
+}
 
 export const loadTests = () => import('../data/tests.json')
   .then(json => Object.keys(json)
