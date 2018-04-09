@@ -12,18 +12,18 @@
 </template>
 
 <script>
-import { loadTests, loadResults } from './lib/load'
+import { loadResults } from './lib/load'
 import { makeChartOptions } from './chart-options'
 
 export default {
-  data: () => ({ tests: [], results: [] }),
+  data: () => ({ results: [] }),
   computed: {
     chartProps () {
       return makeChartOptions(this.results)
     }
   },
   mounted () {
-    Promise.all([loadTests(), loadResults()])
+    loadResults()
       .then(([tests, results]) => {
         this.tests = tests
         this.results = results
