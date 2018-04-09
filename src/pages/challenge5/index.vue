@@ -1,26 +1,13 @@
 <template>
   <div>
-    <C3Chart v-bind="chartProps" />
+    <MainChart />
   </div>
 </template>
 
 <script>
-import { loadTests, loadResults } from './lib/load'
-import { makeChartOptions } from './chart-options'
+import MainChart from './main-chart.vue'
 
 export default {
-  data: () => ({ tests: [], results: [] }),
-  computed: {
-    chartProps () {
-      return makeChartOptions(this.results)
-    }
-  },
-  mounted () {
-    Promise.all([loadTests(), loadResults()])
-      .then(([tests, results]) => {
-        this.tests = tests
-        this.results = results
-      })
-  }
+  components: { MainChart }
 }
 </script>
