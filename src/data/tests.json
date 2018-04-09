@@ -1,0 +1,56 @@
+{
+  "Php-Bcampos": {
+    "exec": "/usr/bin/php Php-Bcampos.php",
+    "language": "Php",
+    "creator": "Bernardino Campos",
+    "source": "https://github.com/BernardinoCampos/Desafio5/blob/master/Desafio5.php"
+  },
+  "Python-Demetrescu": {
+    "exec": "/usr/bin/python3 Python-Demetrescu.py",
+    "language": "Python",
+    "creator": "Roger Demetrescu",
+    "source": ""
+  },
+  "C-SergioCorreia": {
+    "exec": "./C-SergioCorreia",
+    "language": "C",
+    "creator": "Sérgio Correia",
+    "source": "https://github.com/OsProgramadores/op-desafios/blob/master/desafio-05/qrwteyrutiyoup/c"
+  },
+  "Go-SergioCorreia": {
+    "exec": "./Go-SergioCorreia",
+    "language": "Go",
+    "creator": "Sérgio Correia",
+    "source": "https://github.com/OsProgramadores/op-desafios/blob/master/desafio-05/qrwteyrutiyoup/go"
+  },
+  "Go-MarcoPaganini": {
+    "exec": "./Go-MarcoPaganini",
+    "language": "Go",
+    "creator": "Marco Paganini",
+    "source": "https://github.com/OsProgramadores/op-desafios/tree/master/desafio-05/marcopaganini"
+  },
+  "Php-Mockba": {
+    "exec": "/usr/bin/php Php-Mockba.php",
+    "language": "Php",
+    "creator": "Mockba - The Borg",
+    "source": "https://github.com/BernardinoCampos/Desafio5/blob/master/Desafio5_V4.php"
+  },
+  "Java-MarcoAntonio": {
+    "exec": "/usr/bin/java -jar Java-MarcoAntonio.jar",
+    "language": "Java",
+    "creator": "Marco Antônio",
+    "source": "https://github.com/mrcrch/op-d05-java/tree/jsoniter2"
+  },
+  "Python-LuizLima": {
+    "exec": "/usr/bin/python3 Python-LuizLima.py",
+    "language": "Python",
+    "creator": "Luiz Lima",
+    "source": ""
+  },
+  "Rust-AndreGarzia": {
+    "exec": "./Rust-AndreGarzia",
+    "language": "Rust",
+    "creator": "André Garzia",
+    "source": "https://bitbucket.org/andregarzia/desafio-5-rust"
+  }
+}

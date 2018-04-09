@@ -37,4 +37,10 @@ function $nextTickInSequence (...fns) {
   return callNext()
 }
 
+export const install = Vue => {
+  Object.defineProperty(Vue.prototype, `$nextTickInSequence`, {
+    get: () => $nextTickInSequence
+  })
+}
+
 export default $nextTickInSequence

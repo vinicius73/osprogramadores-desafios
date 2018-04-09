@@ -7,7 +7,8 @@ export default (enable = false) => {
 
   return {
     created () {
-      this.$_id = `${this.$options.name}-${this.$hashids.encode(Date.now())}`
+      // this.$_id = `${this.$options.name}-${this.$hashids.encode(Date.now())}`
+      this.$_id = `${this.$options.name}-${Date.now()}`
     },
     methods: {
       log (...args) {

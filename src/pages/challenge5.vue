@@ -1,15 +1,26 @@
 <template>
   <div>
-    <Sparkline :values="[1,2,5,3,2,6,4,1,2,6,2,2,3,4,5]" />
+    <C3Chart v-bind="chartProps" />
   </div>
 </template>
 
 <script>
-import Sparkline from '../support/c3/components/sparkline.js'
+import { loadTests, loadResults } from './lib/load'
+import { makeChartOptions } from './chart-options'
+
 export default {
-  components: { Sparkline }
+  data: () => ({ tests: [], results: [] }),
+  computed: {
+    chartProps () {
+      return makeChartOptions(this.results)
+    }
+  },
+  mounted () {
+    Promise.all([loadTests(), loadResults()])
+      .then(([tests, results]) => {
+        this.tests = tests
+        this.results = results
+      })
+  }
 }
 </script>
-
-<style lang="css">
-</style>
