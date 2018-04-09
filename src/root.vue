@@ -1,5 +1,5 @@
 <script>
-import Page from './pages/challenge5'
+import Page from './pages/challenge5/index.vue'
 import RootHeader from './components/header.vue'
 
 export default {
