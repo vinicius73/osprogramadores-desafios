@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const loadMinified = require('./load-minified')
 
@@ -30,6 +31,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+    new LodashModuleReplacementPlugin,
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
