@@ -1,9 +1,10 @@
 <script>
-import Sparkline from '../../support/c3/components/sparkline'
 import { loadTests } from './lib/load-tests'
 
 export default {
-  components: { Sparkline },
+  components: {
+    Sparkline: () => import(/* webpackChunkName: "c3" */'../../support/c3/components/sparkline')
+  },
   data: () => ({ tests: [], loading: true }),
   mounted () {
     loadTests()
