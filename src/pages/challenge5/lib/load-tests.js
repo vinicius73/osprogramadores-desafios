@@ -1,4 +1,4 @@
-import { omit, mean } from 'lodash'
+import { omit, mean, orderBy } from 'lodash'
 const size = '30M'
 
 const normaliseTest = (test, result) => {
@@ -16,8 +16,10 @@ const loadTests = async () => {
     import(/* webpackChunkName: "data" */'../data/results.json')
   ])
 
-  return Object.keys(tests)
+  const list = Object.keys(tests)
     .map(key => normaliseTest(tests[key], results[key]))
+
+  return orderBy(list, row => row.results[0].avg)
 }
 
 export { loadTests }

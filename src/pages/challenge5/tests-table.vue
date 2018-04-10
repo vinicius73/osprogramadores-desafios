@@ -30,8 +30,9 @@ export default {
           <tr v-for="test in tests">
             <td>{{ test.creator }}</td>
             <td>
-              <a :href="test.source" target="_blank" title="clique para ver o código fonte">
-                {{ test.language }}
+              <span v-if="test.source.length === 0">{{ test.language }}</span>
+              <a v-else :href="test.source" target="_blank" class="button is-small" title="clique para ver o código fonte">
+                <i class="fa fa-code-branch"></i>  {{ test.language }}
               </a>
             </td>
             <td>
@@ -46,6 +47,9 @@ export default {
 </template>
 
 <style scoped>
+  .fa {
+    margin-right: 5px;
+  }
   .sparkline {
     display: inline-block;
   }
