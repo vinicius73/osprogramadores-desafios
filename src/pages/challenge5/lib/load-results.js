@@ -1,8 +1,8 @@
-import { reduce, get, orderBy } from 'lodash'
+import { reduce, orderBy } from 'lodash'
 import { rounds } from './chart-options'
 
 const getRounds = result => reduce(rounds, (acc, key) => {
-  acc.push(get(result, [key, 'media'], 0))
+  acc.push(result[key].media || 0)
   return acc
 }, [])
 
@@ -10,8 +10,8 @@ const makeLabel = ({ language, creator }) => `${language} (${creator})`
 
 const loadResults = async () => {
   const [tests, results] = await Promise.all([
-    import('../data/tests.json'),
-    import('../data/results.json')
+    import(/* webpackChunkName: "data" */'../data/tests.json'),
+    import(/* webpackChunkName: "data" */'../data/results.json')
   ])
 
   return orderBy(Object.keys(results))

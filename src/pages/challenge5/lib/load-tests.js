@@ -1,8 +1,8 @@
-import { omit, get, mean } from 'lodash'
+import { omit, mean } from 'lodash'
 const size = '30M'
 
 const normaliseTest = (test, result) => {
-  const values = get(result, [size, 'tempos'], [])
+  const values = result[size].tempos || []
   const avg = mean(values)
   return {
     ...omit(test, ['exec']),
@@ -12,8 +12,8 @@ const normaliseTest = (test, result) => {
 
 const loadTests = async () => {
   const [tests, results] = await Promise.all([
-    import('../data/tests.json'),
-    import('../data/results.json')
+    import(/* webpackChunkName: "data" */'../data/tests.json'),
+    import(/* webpackChunkName: "data" */'../data/results.json')
   ])
 
   return Object.keys(tests)
