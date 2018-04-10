@@ -4,12 +4,18 @@
       <a class="navbar-item" href="http://www.osprogramadores.com/desafios">
         Os Programadores [Desafio 05]
       </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a href="https://github.com/vinicius73/osprogramadores-desafios"
+               target="_blank" class="button is-black">
+               <i class="fab fa-github"></i> Fork-it
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
@@ -19,5 +25,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped>
+.fab {
+  margin-right: 5px;
+}
 </style>
