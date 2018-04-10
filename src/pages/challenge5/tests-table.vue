@@ -23,7 +23,7 @@ export default {
           <tr>
             <th>Criador</th>
             <th>Linguagem</th>
-            <th>Média (30K)</th>
+            <th>Média (30M)</th>
           </tr>
         </thead>
         <tbody>
