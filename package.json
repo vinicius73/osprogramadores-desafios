@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "Os Programadores Desafios (Resultados)",
   "author": "Vinicius Reis <luiz.vinicius73@gmail.com>",
+  "keywords": ["vue", "javascript", "js", "pwa"],
+  "contributors": [],
+  "homepage": "https://vinicius73.github.io/osprogramadores-desafios/",
+  "bugs": "https://vinicius73.github.io/osprogramadores-desafios/issues",
+  "repository": "https://github.com/vinicius73/osprogramadores-desafios",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",

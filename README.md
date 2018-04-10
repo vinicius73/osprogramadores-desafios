@@ -1,8 +1,9 @@
-# osprogramadores-desafios
+# Os Programadores - Desafios
 
-> Os Programadores Desafios (Resultados)
+> [Os Programadores Desafios](http://www.osprogramadores.com/desafios) (Resultados)
+> https://vinicius73.github.io/osprogramadores-desafios/
 
-## Build Setup
+## Setup
 
 ``` bash
 # install dependencies
@@ -17,5 +18,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
